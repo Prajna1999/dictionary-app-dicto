@@ -88,19 +88,15 @@ body{
     display: none;
     /* transition: all 0.3s ease; */
 }
-.container ul li{
+/* every child expect the last */
+.container ul li:not(:last-child){
     display: flex;
     padding-bottom: 15px;
     margin-bottom: 15px;
     border-bottom: 1px solid var(--border-color);
 
 }
-.container ul li:last-child{
-    border-bottom: 0;
-    margin-bottom: 0;
-    padding-bottom: 0;
 
-}
 .word p{
     font-size: 22px;
     font-weight: 500;
