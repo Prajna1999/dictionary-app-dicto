@@ -20,3 +20,61 @@ body{
     align-items: center;
     background-color: var(--primary-color);
 }
+.container{
+    background-color: var(--container-color);
+    width: 420px;
+    border-radius: 6px;
+    border: 2px solid var(--border-color);
+    padding: 20px 25px;
+}
+.container header{
+    width: 100%;
+    font-size: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.searchbar{
+    position: relative;
+    
+}
+.searchbar input{
+    width: 100%;
+    height: 50px;
+    outline: none;
+    padding: 0 42px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+.searchbar input:focus{
+    border: 2px solid var(--primary-color);
+}
+.searchbar input::placeholder{
+    color: #b8b8b8;
+}
+.searchbar :where(i){
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 18px;
+    pointer-events: none;
+    font-size: 20px;
+}
+.searchbar input:focus~i,
+.searchbar input:focus~span{
+    color: var(--primary-color);
+}
+ .searchbar span{
+     position:absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 12px;
+        font-size: 20px;
+        cursor: pointer;
+        display: none;
+
+}
+.searchbar input:valid~span{
+    display: block;
+}
