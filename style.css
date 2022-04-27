@@ -1,10 +1,15 @@
+@import url(//db.onlinewebfonts.com/c/9b06ae83a4412168ed194a8ed31218c2?family=Mabry+Pro+Medium);
+
 :root{
-    
+    --primary-color:#FE47B3;
+    --border-color:#000;
+    --container-color:#FFF;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Mabry Pro Medium", sans-serif;
 }
 body{
     width: 100vw;
@@ -12,4 +17,5 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--primary-color);
 }
