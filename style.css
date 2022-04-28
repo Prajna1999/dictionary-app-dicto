@@ -33,6 +33,26 @@ body{
     padding-bottom: 20px;
     text-align: center;
 }
+/* for the use in javaScript */
+.container ul{
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    /* transition: all 0.3s ease; */
+}
+.container.active ul{
+    height: max-content;
+    opacity: 1;
+}
+.container .info-text{
+    color: #b8b8b8;
+    margin: -3px 0 -10px;
+    display: block;
+}
+.container.active .info-text{
+    display: none;
+}
 .searchbar{
     position: relative;
     margin:35px 0 20px;
@@ -80,14 +100,8 @@ body{
 .searchbar input:valid~span{
     display: block;
 }
-.container .info-text{
-    color: #b8b8b8;
-    margin: -3px 0 -10px;
-}
-.container ul{
-    display: none;
-    /* transition: all 0.3s ease; */
-}
+
+
 /* every child expect the last */
 .container ul li:not(:last-child){
     display: flex;

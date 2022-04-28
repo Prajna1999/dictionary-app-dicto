@@ -20,7 +20,14 @@ function fetchApi(word){
         }
         return response.json();
     }).then((result)=>{
-        // do something.
         console.log(result);
-    }).catch((e)=>console.log(e.message));
+        data(result);
+    }).catch((e)=>{
+        console.log(e.message)
+        infoText.innerHTML=`Sorry pal, we could not find the definition for the <span>"${word}"</span> you're looking for.`;
+    });
+}
+
+function data(result){
+    wrapper.classList.add("active");
 }
