@@ -30,4 +30,10 @@ function fetchApi(word){
 
 function data(result){
     wrapper.classList.add("active");
+
+    const definitions=result[0].meanings[0].definitions[0];
+    const phonetics=`${result[0].meanings[0].partOfSpeech} /${result[0].phonetic}/`;
+    document.querySelector(".word p").innerText=result[0].word;
+    document.querySelector(".word span").innerText=phonetics;
+    document.querySelector(".meaning span").innerText=definitions.definition;
 }
