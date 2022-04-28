@@ -141,3 +141,12 @@ body{
     text-decoration: underline;
 
 }
+ul .content{
+    max-height: 215px;
+    overflow: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+ul .content::-webkit-scrollbar{
+    display: none;
+}
